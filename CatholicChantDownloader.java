@@ -1,5 +1,4 @@
 import java.io.BufferedInputStream;
-import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -17,7 +16,7 @@ class CatholicChantDownloader {
     }
 
     static void downloadSheet() {
-        new File("Sheet").mkdirs();
+        new File("sheet").mkdirs();
         for (int i = 1; i < 530; i++) {
             String number = padLeftZeros(String.valueOf(i), 3);
             try {
@@ -30,7 +29,7 @@ class CatholicChantDownloader {
     }
 
     static void downloadMp3() {
-        new File("Mp3").mkdirs();
+        new File("mp3").mkdirs();
         for (int i = 1; i < 401; i++) {
             String number = padLeftZeros(String.valueOf(i), 3);
             try{
